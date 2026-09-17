@@ -8,8 +8,8 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 
 ## 🔗 Live Deployments
 
+- 🌐 **Frontend Web App (Vercel):** [https://adtrack-campaign-manager.vercel.app](https://adtrack-campaign-manager.vercel.app)
 - ⚙️ **Backend REST API (Render):** [https://adtrack-campaign-manager.onrender.com/api/campaigns](https://adtrack-campaign-manager.onrender.com/api/campaigns)
-- 🌐 **Frontend Web App (Vercel):** _[Add your Vercel Link Here]_
 
 ---
 
@@ -19,7 +19,8 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 - 🔄 **Full CRUD Operations**: Create, Read, Update (toggle status between _Active_ and _Paused_), and Delete advertising campaigns with persistent data storage.
 - 🔍 **Dynamic Filtering & Search**: Instant client-side search by campaign name and multi-platform filtering without page reload.
 - ⚡ **RESTful Architecture**: Modular backend built on Express.js with JSON data modeling, input validation, and centralized error-handling middleware.
-- 🧩 **Modular Component Architecture**: Clean separation of concerns with isolated component layers (`Header`, `StatsCards`, `CampaignForm`, `FilterBar`, `CampaignTable`) and centralized API services.
+- 🎨 **Modern Dark-Mode SaaS UI**: High-contrast, responsive card layouts, platform-specific badges, status pills, and fluid micro-interactions.
+- 🧩 **Clean Modular Architecture**: Separation of concerns across UI components (`Header`, `StatsCards`, `CampaignForm`, `FilterBar`, `CampaignTable`) and centralized API services.
 
 ---
 
@@ -27,14 +28,14 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 
 ### **Frontend**
 
-- **React.js (v18)** — Component-driven UI architecture & state hooks (`useState`, `useEffect`)
+- **React.js (v18)** — Component-driven UI architecture & hooks (`useState`, `useEffect`)
 - **Vite** — High-performance build tooling & development server
-- **Modular CSS3** — Responsive card layouts, status badges, and smooth transition states
+- **Modular CSS3** — Custom design tokens, dark glassmorphism, responsive grid layouts
 
 ### **Backend**
 
 - **Node.js** — Asynchronous JavaScript runtime environment
-- **Express.js** — REST API routing, query parsing, and middleware
+- **Express.js** — REST API routing, aggregation algorithms, and middleware
 - **CORS** — Configured for secure cross-origin communication with Vercel frontend
 - **FS Persistence** — Server-side persistent file storage (`data.json`)
 
@@ -53,20 +54,30 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 
 ## 📁 Project Structure
 
+```text
 adtrack-campaign-manager/
 ├── server/
-│ ├── data.json # Persistent JSON storage for campaigns
-│ ├── package.json # Express dependencies & scripts
-│ └── server.js # REST API endpoints & business logic
+│   ├── data.json              # Persistent JSON storage for campaigns
+│   ├── package.json           # Express dependencies & scripts
+│   └── server.js              # REST API endpoints & aggregation logic
 ├── client/
-│ ├── src/
-│ │ ├── App.jsx # Main React UI component & state logic
-│ │ ├── index.css # Base styling and design tokens
-│ │ └── main.jsx # React entry point
-│ ├── index.html # Root HTML template
-│ ├── package.json # React & Vite configuration
-│ └── vite.config.js # Vite plugin setup
+│   ├── src/
+│   │   ├── components/        # Modular UI components
+│   │   │   ├── CampaignForm.jsx
+│   │   │   ├── CampaignTable.jsx
+│   │   │   ├── FilterBar.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── StatsCards.jsx
+│   │   ├── services/
+│   │   │   └── api.js         # Centralized API network service layer
+│   │   ├── App.jsx            # Main view orchestrator
+│   │   ├── index.css          # Core design tokens and stylesheet
+│   │   └── main.jsx           # React DOM root entry
+│   ├── index.html             # HTML entry template
+│   ├── package.json           # Frontend dependencies & scripts
+│   └── vite.config.js         # Vite configuration
 └── README.md
+```
 
 ---
 
