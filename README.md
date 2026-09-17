@@ -103,6 +103,6 @@ Frontend application will start at: http://localhost:5173
 
 Mritunjay Shree
 
-GitHub: @mritunjay-shree-108
-LinkedIn: linkedin.com/in/mritunjay-shree
-LeetCode: leetcode.com/mritunjay-shree-108
+- GitHub: @mritunjay-shree-108
+- LinkedIn: linkedin.com/in/mritunjay-shree
+- LeetCode: leetcode.com/mritunjay-shree-108
