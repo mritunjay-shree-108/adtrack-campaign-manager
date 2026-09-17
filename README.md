@@ -6,13 +6,20 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 
 ---
 
+## 🔗 Live Deployments
+
+- ⚙️ **Backend REST API (Render):** [https://adtrack-campaign-manager.onrender.com/api/campaigns](https://adtrack-campaign-manager.onrender.com/api/campaigns)
+- 🌐 **Frontend Web App (Vercel):** _[Add your Vercel Link Here]_
+
+---
+
 ## 🌟 Key Features
 
 - 📊 **Real-Time KPI Dashboard**: Automatically calculates and displays aggregate performance metrics including **Total Ad Spend, Total Clicks, Total Impressions, and Average Click-Through Rate (CTR %)**.
 - 🔄 **Full CRUD Operations**: Create, Read, Update (toggle status between _Active_ and _Paused_), and Delete advertising campaigns with persistent data storage.
 - 🔍 **Dynamic Filtering & Search**: Instant client-side search by campaign name and multi-platform filtering without page reload.
-- ⚡ **RESTful Architecture**: Clean modular backend built on Express.js with JSON data modeling, input validation, and centralized error-handling middleware.
-- 📱 **Modern Responsive UI**: Clean, accessible, and fast user interface designed with modern CSS and reactive component state.
+- ⚡ **RESTful Architecture**: Modular backend built on Express.js with JSON data modeling, input validation, and centralized error-handling middleware.
+- 🧩 **Modular Component Architecture**: Clean separation of concerns with isolated component layers (`Header`, `StatsCards`, `CampaignForm`, `FilterBar`, `CampaignTable`) and centralized API services.
 
 ---
 
@@ -20,16 +27,16 @@ AdTrack empowers marketing and product teams to seamlessly track, filter, and an
 
 ### **Frontend**
 
-- **React.js (v18)** — Component-driven UI architecture & state management hooks (`useState`, `useEffect`)
-- **Vite** — Lightning-fast frontend build tooling
-- **CSS3** — Custom modern responsive layouts, focus states, and smooth transitions
+- **React.js (v18)** — Component-driven UI architecture & state hooks (`useState`, `useEffect`)
+- **Vite** — High-performance build tooling & development server
+- **Modular CSS3** — Responsive card layouts, status badges, and smooth transition states
 
 ### **Backend**
 
 - **Node.js** — Asynchronous JavaScript runtime environment
-- **Express.js** — Scalable REST API routing and middleware
-- **CORS** — Cross-Origin Resource Sharing handling
-- **FS (File System) Persistence** — Server-side persistent storage
+- **Express.js** — REST API routing, query parsing, and middleware
+- **CORS** — Configured for secure cross-origin communication with Vercel frontend
+- **FS Persistence** — Server-side persistent file storage (`data.json`)
 
 ---
 
