@@ -117,10 +117,11 @@ npm run dev
 
 Frontend application will start at: http://localhost:5173
 
-### 👨‍💻 Author
+## 👨‍💻 Author
 
-Mritunjay Shree
+**Mritunjay Shree**
 
-- GitHub: @mritunjay-shree-108
-- LinkedIn: linkedin.com/in/mritunjay-shree
-- LeetCode: leetcode.com/mritunjay-shree-108
+- 🐙 **GitHub:** [@mritunjay-shree-108](https://github.com/mritunjay-shree-108)
+- 💼 **LinkedIn:** [Mritunjay Shree](https://www.linkedin.com/in/mritunjay-shree)
+- 🧠 **LeetCode:** [mritunjay-shree-108](https://leetcode.com/u/mritunjay-shree-108/)
+- 📧 **Email:** [mritunjay.shree.1089@gmail.com](mailto:mritunjay.shree.1089@gmail.com)
