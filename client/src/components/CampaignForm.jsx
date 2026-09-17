@@ -26,22 +26,22 @@ export default function CampaignForm({ onAddCampaign }) {
   };
 
   return (
-    <div className="card form-card">
-      <h2 className="card-title">Launch New Campaign</h2>
+    <div className="card">
+      <h2 className="card-title">🚀 Launch Campaign</h2>
       <form onSubmit={handleSubmit} className="campaign-form">
         <div className="form-group">
           <label>Campaign Name *</label>
           <input
             type="text"
             required
-            placeholder="e.g. Q4 Brand Growth"
+            placeholder="e.g. Q4 Growth Sprint"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
 
         <div className="form-group">
-          <label>Platform</label>
+          <label>Target Channel</label>
           <select
             value={formData.platform}
             onChange={(e) =>
@@ -61,7 +61,7 @@ export default function CampaignForm({ onAddCampaign }) {
             <input
               type="number"
               required
-              placeholder="1000"
+              placeholder="1200"
               value={formData.budget}
               onChange={(e) =>
                 setFormData({ ...formData, budget: e.target.value })
@@ -69,7 +69,7 @@ export default function CampaignForm({ onAddCampaign }) {
             />
           </div>
           <div className="form-group">
-            <label>Clicks</label>
+            <label>Estimated Clicks</label>
             <input
               type="number"
               placeholder="450"
@@ -82,10 +82,10 @@ export default function CampaignForm({ onAddCampaign }) {
         </div>
 
         <div className="form-group">
-          <label>Impressions</label>
+          <label>Target Impressions</label>
           <input
             type="number"
-            placeholder="15000"
+            placeholder="25000"
             value={formData.impressions}
             onChange={(e) =>
               setFormData({ ...formData, impressions: e.target.value })
@@ -94,7 +94,7 @@ export default function CampaignForm({ onAddCampaign }) {
         </div>
 
         <button type="submit" className="btn-primary">
-          + Create Campaign
+          + Launch Campaign
         </button>
       </form>
     </div>

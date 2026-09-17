@@ -7,22 +7,26 @@ export default function StatsCards({ summary }) {
     {
       label: "TOTAL AD SPEND",
       value: `$${summary.totalBudget.toLocaleString()}`,
-      colorClass: "text-green",
+      icon: "💰",
+      sub: "Allocated budget",
     },
     {
       label: "TOTAL CLICKS",
       value: summary.totalClicks.toLocaleString(),
-      colorClass: "text-blue",
+      icon: "🖱️",
+      sub: "User engagements",
     },
     {
       label: "IMPRESSIONS",
       value: summary.totalImpressions.toLocaleString(),
-      colorClass: "text-purple",
+      icon: "👁️",
+      sub: "Ad exposures",
     },
     {
-      label: "AVG. CTR",
+      label: "AVG. CLICK-THROUGH RATE",
       value: `${summary.avgCTR}%`,
-      colorClass: "text-amber",
+      icon: "🎯",
+      sub: "Conversion efficiency",
     },
   ];
 
@@ -30,8 +34,12 @@ export default function StatsCards({ summary }) {
     <section className="stats-grid">
       {stats.map((stat, idx) => (
         <div key={idx} className="stat-card">
-          <span className="stat-label">{stat.label}</span>
-          <span className={`stat-value ${stat.colorClass}`}>{stat.value}</span>
+          <div className="stat-header">
+            <span className="stat-label">{stat.label}</span>
+            <span className="stat-icon">{stat.icon}</span>
+          </div>
+          <div className="stat-value">{stat.value}</div>
+          <div className="stat-subtext">✦ {stat.sub}</div>
         </div>
       ))}
     </section>

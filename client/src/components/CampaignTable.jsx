@@ -5,13 +5,28 @@ export default function CampaignTable({
   onToggleStatus,
   onDeleteCampaign,
 }) {
+  const getPlatformClass = (platform) => {
+    switch (platform) {
+      case "Google Ads":
+        return "platform-google";
+      case "Meta":
+        return "platform-meta";
+      case "LinkedIn":
+        return "platform-linkedin";
+      case "YouTube":
+        return "platform-youtube";
+      default:
+        return "platform-meta";
+    }
+  };
+
   return (
     <div className="card table-card">
       <table className="custom-table">
         <thead>
           <tr>
-            <th>Campaign</th>
-            <th>Platform</th>
+            <th>Campaign Name</th>
+            <th>Channel</th>
             <th>Budget</th>
             <th>CTR</th>
             <th>Status</th>
@@ -22,7 +37,7 @@ export default function CampaignTable({
           {campaigns.length === 0 ? (
             <tr>
               <td colSpan="6" className="empty-state">
-                No campaigns found.
+                No matching campaigns found. Launch one from the left panel!
               </td>
             </tr>
           ) : (
@@ -33,18 +48,26 @@ export default function CampaignTable({
                   : "0.0";
               return (
                 <tr key={c.id}>
-                  <td className="font-semibold">{c.name}</td>
-                  <td className="text-secondary">{c.platform}</td>
-                  <td className="text-green font-semibold">
+                  <td className="campaign-name">{c.name}</td>
+                  <td>
+                    <span
+                      className={`platform-tag ${getPlatformClass(c.platform)}`}
+                    >
+                      {c.platform}
+                    </span>
+                  </td>
+                  <td style={{ color: "#34d399", fontWeight: "700" }}>
                     ${Number(c.budget).toLocaleString()}
                   </td>
-                  <td>{ctr}%</td>
+                  <td style={{ fontWeight: "700", color: "#f1f5f9" }}>
+                    {ctr}%
+                  </td>
                   <td>
                     <button
                       onClick={() => onToggleStatus(c)}
-                      className={`status-badge ${c.status === "Active" ? "badge-active" : "badge-paused"}`}
+                      className={`status-btn ${c.status === "Active" ? "status-active" : "status-paused"}`}
                     >
-                      {c.status}
+                      {c.status === "Active" ? "● Active" : "○ Paused"}
                     </button>
                   </td>
                   <td style={{ textAlign: "right" }}>
