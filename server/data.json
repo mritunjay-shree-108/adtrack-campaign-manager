@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Google Search Q3 Campaign",
+    "platform": "Google Ads",
+    "budget": 1500,
+    "impressions": 42000,
+    "clicks": 2150,
+    "status": "Active",
+    "createdAt": "2026-09-17T10:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Meta Product Retargeting",
+    "platform": "Meta",
+    "budget": 950,
+    "impressions": 28000,
+    "clicks": 1340,
+    "status": "Active",
+    "createdAt": "2026-09-17T11:30:00.000Z"
+  },
+  {
+    "id": "3",
+    "name": "LinkedIn B2B Lead Gen",
+    "platform": "LinkedIn",
+    "budget": 2200,
+    "impressions": 15000,
+    "clicks": 480,
+    "status": "Paused",
+    "createdAt": "2026-09-17T12:15:00.000Z"
+  },
+  {
+    "id": "4",
+    "name": "YouTube Video Brand Awareness",
+    "platform": "YouTube",
+    "budget": 1800,
+    "impressions": 65000,
+    "clicks": 3100,
+    "status": "Active",
+    "createdAt": "2026-09-17T14:00:00.000Z"
+  }
+]
